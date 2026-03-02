@@ -1,9 +1,80 @@
+/* =========================
+   GENERAL STYLING
+========================= */
+
 body {
     margin: 0;
     font-family: 'Fredoka', sans-serif;
     background-color: #fef6e4;
     text-align: center;
-}.features {
+}
+
+header {
+    background-color: #ff7f50;
+    padding: 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 40px;
+    animation: slideDown 1s ease;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -24,28 +95,77 @@ body {
     transform: translateY(-10px);
 }
 
-.hero {
-    padding: 60px;
-    background: linear-gradient(to right, #ffb347, #ffcc33);
-    color: white;
+/* =========================
+   CONTENT SECTION
+========================= */
+
+.content {
+    padding: 40px;
 }
 
-button {
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+
+form input,
+form textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+form button {
+    width: 50%;
+    padding: 10px;
     border-radius: 20px;
 }
-/* STICKY NAVIGATION */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
 }
 
-/* SMOOTH SCROLL */
-html {
-    scroll-behavior: smooth;
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-/* FLOATING SHAPES */
+/* =========================
+   FLOATING SHAPES
+========================= */
+
 .floating-shape {
     position: absolute;
     width: 50px;
@@ -59,4 +179,36 @@ html {
     0% { transform: translateY(0) translateX(0); }
     50% { transform: translateY(-20px) translateX(15px); }
     100% { transform: translateY(0) translateX(0); }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    ul li {
+        width: 90%;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+
+html {
+    scroll-behavior: smooth;
 }
