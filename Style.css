@@ -1,5 +1,9 @@
-
-.features {
+body {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    background-color: #fef6e4;
+    text-align: center;
+}.features {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
